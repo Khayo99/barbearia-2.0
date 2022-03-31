@@ -1,0 +1,97 @@
+<DOCTYPE html>
+
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width">
+            <title>Contato - Barbearia Alura</title>
+            <link rel="stylesheet" href="reset.css">   
+            <link rel="stylesheet" href="style.css">
+            <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
+                
+        </head>
+        <body>
+            <header>
+                <div class="caixa">
+                <h1><img src="logo.png" alt="Logo da Barbearia"></h1>
+    
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="produtos.html">Produtos</a></li>
+                            <li><a href="contato.html">Contato</a></li>                                                    
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <main>
+                <form>
+                    <label for="nomeSobrenome">Nome e Sobrenome*</label> <!-- nome do campo para preencher-->
+                    <input type="text" id="nomeSobrenome" class="input-padrao" required> <!--campo no qual vai as informações-->
+
+                    <label for="email">E-mail*</label>
+                    <input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com"> <!--REQUIRED quando quero tronar o campo obrigatorio e PLACEHOLDER exemplo no campo-->
+
+                    <label for="telefone">Telefone*</label>
+                    <input type="tel" id="telefone" class="input-padrao" required placeholder="(xx) 12345-1234">
+
+                    <label for="mensagem">Mensagem*</label>
+                    <textarea cols="70" rows="10" id="mensagem" class="input-padrao"></textarea required> <!--tag usada para o campo mensagem-->
+
+                    <fieldset> <!--quando se tem muitos campos de texto ou codigo é substituido a DIV por fieldset-->
+                        <legend>Como prefere o nosso contato?</legend>
+                        <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">E-mail</label> <!--botão de seleção de como quero ser contatado-->
+                         
+                        <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>
+                        
+                        <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label> <!--a tag checked já deixa uma opção marcada-->
+                        <!--Usando a tag name="contato" eu deixei todos no mesmo grupo não deixando marcar mais de um-->
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Qual turno você prefere ser atendido?</legend> <!--Texto seleção de turno-->
+                        <select> <!--Campo de seleção de turno-->
+                            <option>Manhã</option>                
+                            <option>Tarde</option>                  
+                            <option>Final do Dia</option> <!--Opções de turno-->                            
+                        </select>
+                    </fieldset>
+
+                    <label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por E-mail?</label> <!--TAG input pode ser usdo dentro do label-->
+
+                    <input type="submit" value="Enviar formulário" class="enviar"> <!--Botão enviar "VALUE" define o nome que eu quero no botão-->
+                </form>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dia</th>
+                            <th>Horário</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Segunda</td>
+                            <td>8h ~ 20h</td>
+                        </tr>                    
+                        <tr>
+                            <td>Quarta</td>
+                            <td>8h ~ 20h</td>
+                        </tr>
+                        <tr>
+                            <td>Sexta</td>
+                            <td>8h ~ 20h</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </main>
+
+            <footer>                
+                <img src="logo-branco.png" alt="Logo da Barbearia">
+                <p class="copyright">&copy; Copyright Barbearia Alura - 2022</p>                
+            </footer>
+        </body>
+    </html>
